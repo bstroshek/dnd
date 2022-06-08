@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            background: #00b59e;
+        }
+        #div1 {
+            position: absolute;
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: tomato;
+        }
+        #div1:hover {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+<!--Практика 4-->
+<!--Создадим перемещающийся круг по технологии Drag-and-Drop-->
+
+
+<div id="div1"></div>
+
+<script type="text/javascript">
+
+    isDrag = false
+    div1.addEventListener("mousedown", function () {
+        isDrag = true
+    })
+    document.addEventListener("mousemove", function (e) {
+        if (isDrag) {
+            div1.style.left = (e.pageX - 50) + "px"
+            div1.style.top = (e.pageY - 50) + "px"
+        }
+    })
+    document.addEventListener("mouseup", function () {
+        isDrag = false
+    })
+
+
+    
+</script>
+
+</body>
+</html>
