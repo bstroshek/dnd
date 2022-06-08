@@ -47,6 +47,20 @@
         isDrag = false
     })
 
+    div1.addEventListener("touchstart", function () {
+        isDrag = true
+    })
+    document.addEventListener("touchmove", function (e) {
+        if (isDrag) {
+            div1.style.left = (e.pageX - 50) + "px"
+            div1.style.top = (e.pageY - 50) + "px"
+        }
+    })
+    document.addEventListener("touchend", function () {
+        isDrag = false
+    })
+
+
 
     
 </script>
